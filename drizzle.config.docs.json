@@ -1,0 +1,12 @@
+{
+  //
+  // path to the output directory where migrations will be saved,
+  "out": "./src/db/migrations",
+  //
+  // path to TypeScript schema file or folder with multiple schema files,
+  "schema": "./src/db",
+  //
+  // whether to execute each statement in the migrations individually.
+  // Set to true if you are using SQLite or MySQL (as they don't support multiple DDL statements in a transaction).
+  "breakpoints": true
+}

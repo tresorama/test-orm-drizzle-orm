@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+# Main Database ( in respect to eventual shadow databases... )
+# connection_string=postgresql://user:password@host:port/default_db_name
+# connection_string=postgresql://postgres:postgres@localhost:5432/postgres
+  main-db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'
+    volumes: 
+      - ./data/main-db:/var/lib/postgresql/data
